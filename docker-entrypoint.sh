@@ -9,5 +9,6 @@ usermod -u $UID php
 groupmod -g $GID php
 
 chown -R php:php /var/www/html
+chown php /proc/self/fd/{1,2}
 
 exec gosu php "$@"
