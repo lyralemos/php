@@ -43,4 +43,13 @@ jobs:
           build-args: BASE_IMAGE=php:7.4-fpm
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: lyralemos/php:latest,lyralemos/php:7.4
+          tags: lyralemos/php:7.4
+      
+      - name: Build php 8.2
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          build-args: BASE_IMAGE=php:8.2-fpm
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: lyralemos/php:latest,lyralemos/php:8.2
