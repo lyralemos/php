@@ -27,6 +27,7 @@ RUN apt-get update -y &&\
     groupadd php &&\
     useradd -l -g php php
 
+COPY custom-php.ini /usr/local/etc/php/conf.d/custom-php.ini
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
